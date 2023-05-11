@@ -1,0 +1,43 @@
+.backgroundtheme {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url(../img/store_f1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-item {
+  background-color: #edf2f4;
+
+  p {
+    font-size: 16px;
+    font-family: 'roboto';
+  }
+
+  .guzik {
+    background-color: #b8edce;
+    font-family: 'roboto';
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px;
+    width: fit-content;
+    border: 1.5px solid #82e7a8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .cena {
+    letter-spacing: 1px;
+    font-family: 'Rubik';
+  }
+}
+
+.tloskep {
+  background-color: #8d99ae;
+}
+
+.zdj {
+  object-fit: contain;
+}
