@@ -20,9 +20,9 @@ import tanktop from '../assets/img/AlphaTauri.png';
         </p>
       </div>
     </div>
-    <div class="tloskep md:w-2/6 lg:w-3/6 lg:flex">
+    <div class="tloskep flex justify-evenly md:w-2/6 lg:w-3/6  ">
       <div
-        class="card-item rounded-2xl m-auto max-w-fit flex flex-col text-center my-10">
+        class="card-item rounded-2xl max-w-fit flex flex-col text-center my-10">
         <img class="zdj m-auto" :src="polo" alt="Polo Aston Martin" />
         <p class="pt-2">Męska koszulka</p>
         <p class="font-semibold">Aston Martin - Cognizant</p>
@@ -30,7 +30,7 @@ import tanktop from '../assets/img/AlphaTauri.png';
         <div class="guzik rounded-full">Dodaj do koszyka</div>
       </div>
       <div
-        class="hidden lg:block card-item rounded-2xl m-auto max-w-fit flex flex-col text-center my-10">
+        class="card-item hidden lg:block  rounded-2xl max-w-fit flex flex-col text-center my-10 ">
         <img class="zdj m-auto" :src="tanktop" alt="Tank Top Alpine F1" />
         <p class="pt-2">Męska koszulka Tank Top</p>
         <p class="font-semibold">Alpine F1</p>

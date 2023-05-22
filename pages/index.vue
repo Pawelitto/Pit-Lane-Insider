@@ -3,5 +3,7 @@
     <Hero />
     <Blog />
     <Store />
+    <NewsLetter />
+    <Footer />
   </div>
 </template>
