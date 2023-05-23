@@ -1,12 +1,13 @@
 <script setup>
-import lewisH from '../assets/img/blog_lewis.png';
+import lewisH from "../assets/img/blog_lewis.png";
 </script>
 <template>
   <div>
     <div class="flex flex-col md:flex-row m-auto xl:w-5/6 2xl:w2/6">
       <div class="md:mt-10 md:w-11/12">
         <div
-          class="m-auto mt-4 w-5/6 sm:w-4/6 text-center flex flex-col md:text-left">
+          class="m-auto mt-4 w-5/6 sm:w-4/6 text-center flex flex-col md:text-left"
+        >
           <span class="text-2xl">Pit Lane</span>
           <span class="bloghead">BLOG</span>
         </div>
@@ -23,11 +24,14 @@ import lewisH from '../assets/img/blog_lewis.png';
         <img
           class="m-auto sm:rounded md:rounded-2xl"
           :src="lewisH"
-          alt="Lewis Hamilton" />
+          alt="Lewis Hamilton"
+        />
       </div>
     </div>
     <div class="w-full text-center">
-      <button class="dvis m-5">CZYTAJ CAŁOŚĆ</button>
+      <button class="dvis m-5 hover:text-red-700 hover:font-medium">
+        CZYTAJ CAŁOŚĆ
+      </button>
     </div>
   </div>
 </template>
