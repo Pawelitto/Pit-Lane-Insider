@@ -2,8 +2,7 @@
   <div>
     <Hero />
     <Blog />
-    <Store />
+    <StoreHero />
     <NewsLetter />
-    <Footer />
   </div>
 </template>

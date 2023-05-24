@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.6.7",
+    "@vueuse/core": "^10.1.2",
     "flowbite": "^1.6.5",
     "flowbite-vue": "0.0.10",
     "scss": "^0.2.4"

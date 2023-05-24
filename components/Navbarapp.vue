@@ -1,5 +1,11 @@
+<script setup>
+import { useWindowScroll } from "@vueuse/core";
+
+const { x, y } = useWindowScroll();
+</script>
 <template>
   <nav
+    :class="y > 50 ? 'sticky-nav' : 'nav'"
     class="navbarback bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
   >
     <div
