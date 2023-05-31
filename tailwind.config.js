@@ -11,7 +11,25 @@ module.exports = {
     './node_modules/flowbite.{js,ts}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#d80032',
+        'secondary': '#111827',
+        'neutral': '#8d99ae',
+
+        'dgreen': '#16a34a',
+        'lgreen': '#22c55e',
+
+        'lred': '#ef4444',
+        'dred': '#dc2626',
+        'ddred': '#b91c1c',
+
+        'lgray': '#64748b',
+        'dgray': '#475569',
+        'llgray': '#f3f4f6',
+        'ddgray': '#374151',
+      },
+    },
   },
   plugins: [require('flowbite/plugin')],
 };

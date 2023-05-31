@@ -1,31 +1,61 @@
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
+import { createWebHistory } from "vue-router";
 
 const { x, y } = useWindowScroll();
+
+const navbarElements = [
+  {
+    name: "Blog",
+    path: "/blog",
+    dropdown: false,
+    children: [],
+  },
+  {
+    name: "Wyniki",
+    path: "/wyniki",
+    dropdown: true,
+    children: [
+      { cname: "Klasyfikacja", cpath: "/klasyfikacja" },
+      { cname: "Kierowcy", cpath: "/kierowcy" },
+      { cname: "Zespoły", cpath: "/zespoly" },
+      { cname: "Ranking", cpath: "/ranking" },
+    ],
+  },
+  {
+    name: "Sklep",
+    path: "/sklep",
+    dropdown: false,
+    children: [],
+  },
+  {
+    name: "Kontakt",
+    path: "/contact",
+    dropdown: false,
+    children: [],
+  },
+];
 </script>
 <template>
-  <nav
-    :class="y > 50 ? 'sticky-nav' : 'nav'"
-    class="navbarback bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
-  >
+  <nav :class="y > 50 ? 'sticky-nav' : 'nav'" class="navbarback">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
-      <a href="#" class="flex items-center">
+      <NuxtLink href="/" class="flex items-center">
         <!-- <img
           src="https://flowbite.com/docs/images/logo.svg"
           class="h-8 mr-3"
           alt="Flowbite Logo"
         /> -->
         <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white tracking-widest"
+          class="self-center text-2xl text-llgray font-semibold whitespace-nowrap tracking-widest hover:text-dgray"
           >Pit Lane Insider</span
         >
-      </a>
+      </NuxtLink>
       <button
         data-collapse-toggle="navbar-dropdown"
         type="button"
-        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 ml-3 text-sm text-lgray rounded-lg md:hidden hover:bg-llgray focus:outline-none focus:ring-2 focus:ring-llgray"
         aria-controls="navbar-dropdown"
         aria-expanded="false"
       >
@@ -49,12 +79,12 @@ const { x, y } = useWindowScroll();
         id="navbar-dropdown"
       >
         <ul
-          class="text-xl flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 tracking-widest"
+          class="text-xl flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent tracking-widest"
         >
-          <li>
+          <!-- <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-white bg-slate-700 rounded md:bg-transparent md:text-red-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+              class="block py-2 pl-3 pr-4 text-ddgray md:text-llgray rounded hover:text-llgray hover:bg-lgray md:hover:bg-transparent md:border-0 md:hover:text-dgray md:p-0"
               aria-current="page"
               >Blog</a
             >
@@ -63,7 +93,7 @@ const { x, y } = useWindowScroll();
             <button
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
-              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent md:text-white"
+              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-ddgray rounded hover:bg-llgray md:hover:bg-transparent md:border-0 md:hover:text-dgray md:p-0 md:w-auto md:text-white"
             >
               Wyniki
               <svg
@@ -80,67 +110,57 @@ const { x, y } = useWindowScroll();
                 ></path>
               </svg>
             </button>
-            <!-- Dropdown menu -->
+
             <div
               id="dropdownNavbar"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              class="z-10 hidden font-normal bg-white divide-y divide-llgray rounded-lg shadow w-44"
             >
               <ul
-                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                class="py-2 text-sm text-dgray"
                 aria-labelledby="dropdownLargeButton"
               >
                 <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  <a href="#" class="block px-4 py-2 hover:bg-llgray"
                     >Klasyfikacja</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  <a href="#" class="block px-4 py-2 hover:bg-llgray"
                     >Kierowcy</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  <a href="#" class="block px-4 py-2 hover:bg-llgray"
                     >Zespoły</a
                   >
                 </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-llgray"
+                    >Ranking</a
+                  >
+                </li>
               </ul>
-              <div class="py-1">
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                  >Rankingi</a
-                >
-              </div>
             </div>
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="block py-2 pl-3 pr-4 text-ddgray md:text-llgray rounded hover:text-llgray hover:bg-lgray md:hover:bg-transparent md:border-0 md:hover:text-dgray md:p-0"
               >Sklep</a
             >
           </li>
           <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:text-white"
-              >Kontakt</a
-            >
-          </li>
-          <!-- <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Contact</a
+            <NuxtLink
+              href="/contact"
+              class="block py-2 pl-3 pr-4 text-ddgray md:text-llgray rounded hover:text-llgray hover:bg-lgray md:hover:bg-transparent md:border-0 md:hover:text-dgray md:p-0"
+              >Kontakt</NuxtLink
             >
           </li> -->
+          <NavElement
+            v-for="element in navbarElements"
+            :key="element.name"
+            :element="element"
+          />
         </ul>
       </div>
     </div>

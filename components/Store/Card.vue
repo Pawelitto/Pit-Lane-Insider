@@ -8,7 +8,7 @@ const props = defineProps({ card: Object });
     <img class="zdj m-auto" :src="card.img" alt="Tank Top Alpine F1" />
     <p class="pt-2">{{ card.type }}</p>
     <p class="font-semibold">{{ card.name }}</p>
-    <p class="cena p-4">{{ card.price }}</p>
+    <p class="cena p-4">{{ card.price }} zł</p>
     <div class="guzik rounded-full">Dodaj do koszyka</div>
   </div>
 </template>

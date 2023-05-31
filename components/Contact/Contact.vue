@@ -1,69 +1,74 @@
 <template>
   <div class="contact-container">
-    <section class="mx-3 bg-white dark:bg-gray-700 rounded">
-      <div class="py-8 pxlg:py-16 px-4 mx-auto max-w-screen-md">
-        <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-center text-green-500 dark:text-white"
+    <section
+      class="text-gray-800 bg-white rounded-lg mx-3 mt-32 sm:p-6 lg:w-3/4 xl:w-2/4"
+    >
+      <div class="flex flex-wrap">
+        <div
+          class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full px-3 md:w-6/12 lg:px-6"
         >
-          Skontaktuj się z nami
-        </h2>
-        <p
-          class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
+          <h2 class="text-3xl font-bold mb-4 mt-2 text-green-500">
+            Skontaktuj się z nami
+          </h2>
+          <p class="text-gray-500 mb-6">
+            Chcesz poznać więcej szczegółów? Skontaktuj się z nami już teraz
+            przez formularz na naszej stronie internetowej! Czekamy na Twój
+            feedback i pytania. Dołącz do naszej społeczności już
+            <span class="text-green-500 font-medium">dziś!</span>
+          </p>
+          <p class="text-gray-500 mb-2">New York, 94126, United States</p>
+          <p class="text-gray-500 mb-2">+48 234 567 819</p>
+          <p class="text-gray-500 mb-2">pit.insider@gmail.com</p>
+        </div>
+        <div
+          class="grow-0 shrink-0 basis-auto mb-4 md:mb-0 w-full md:w-6/12 px-3 lg:px-6"
         >
-          Chcesz poznać więcej szczegółów? Skontaktuj się z nami już teraz przez
-          formularz na naszej stronie internetowej! Czekamy na Twój feedback i
-          pytania. Dołącz do naszej społeczności już
-          <span class="text-green-500 font-medium">dziś!</span>
-        </p>
-        <form action="#" class="space-y-8">
-          <div>
-            <label
-              for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Twój email</label
+          <form>
+            <div class="form-group mb-6">
+              <input
+                type="text"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none focus:border-2"
+                id="exampleInput7"
+                placeholder="Imię"
+              />
+            </div>
+            <div class="form-group mb-6">
+              <input
+                type="email"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none focus:border-2"
+                id="exampleInput8"
+                placeholder="Adres email"
+              />
+            </div>
+            <div class="form-group mb-6">
+              <textarea
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none focus:border-2"
+                id="exampleFormControlTextarea13"
+                rows="3"
+                placeholder="Wiadomość..."
+              ></textarea>
+            </div>
+            <div class="form-group form-check text-center mb-6">
+              <input
+                type="checkbox"
+                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-green-500 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer focus:border-2"
+                id="exampleCheck87"
+                checked
+              />
+              <label
+                class="form-check-label inline-block text-gray-800"
+                for="exampleCheck87"
+                >Wyślij mi kopię wiadomości</label
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             >
-            <input
-              type="email"
-              id="email"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="email"
-              required
-            />
-          </div>
-          <div>
-            <label
-              for="name"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Imię</label
-            >
-            <input
-              type="text"
-              id="name"
-              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="imię"
-              required
-            />
-          </div>
-          <div class="sm:col-span-2">
-            <label
-              for="message"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-              >Twoja wiadomość</label
-            >
-            <textarea
-              id="message"
-              rows="6"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="wiadomość..."
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          >
-            Wyślij wiadomość
-          </button>
-        </form>
+              Wyślij
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   </div>
