@@ -1,6 +1,6 @@
 <script setup>
-import polo from "../assets/img/PoloAstonMartin.png";
-import tanktop from "../assets/img/AlphaTauri.png";
+import polo from "../../assets/img/PoloAstonMartin.png";
+import tanktop from "../../assets/img/AlphaTauri.png";
 
 const cards = [
   {

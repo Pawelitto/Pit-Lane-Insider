@@ -1,8 +1,13 @@
+<script setup>
+definePageMeta({
+  layout: "custom",
+});
+</script>
 <template>
   <div>
-    <Hero />
-    <Blog />
-    <StoreHero />
-    <NewsLetter />
+    <HeroTitle />
+    <HeroBlog />
+    <HeroStore />
+    <HeroNewsLetter />
   </div>
 </template>

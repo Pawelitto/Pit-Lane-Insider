@@ -1,5 +1,5 @@
 <script setup>
-import lewisH from "../assets/img/blog_lewis.png";
+import lewisH from "../../assets/img/blog_lewis.png";
 </script>
 <template>
   <div>
@@ -9,7 +9,7 @@ import lewisH from "../assets/img/blog_lewis.png";
           class="m-auto mt-4 w-5/6 sm:w-4/6 text-center flex flex-col md:text-left"
         >
           <span class="text-2xl">Pit Lane</span>
-          <span class="bloghead">BLOG</span>
+          <span class="bloghead">NEWS</span>
         </div>
         <div class="opis m-auto w-5/6 my-6 sm:w-4/6 lg:mt-20">
           Najnowszy wpis na blogu odnosi się do wywiadu z kierowcą

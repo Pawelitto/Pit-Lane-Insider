@@ -1,12 +1,5 @@
 <script setup>
 const props = defineProps({ element: Object });
-
-// const children = [
-//   { cname: "Klasyfikacja", cpath: "/wyniki/klasyfikacja" },
-//   { cname: "Kierowcy", cpath: "/wyniki/kierowcy" },
-//   { cname: "Zespoły", cpath: "/wyniki/zespoly" },
-//   { cname: "Ranking", cpath: "/wyniki/ranking" },
-// ];
 </script>
 <template>
   <div>
@@ -48,18 +41,6 @@ const props = defineProps({ element: Object });
           class="py-2 text-sm text-dgray"
           aria-labelledby="dropdownLargeButton"
         >
-          <!-- <li>
-            <a href="#" class="block px-4 py-2 hover:bg-llgray">Klasyfikacja</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-llgray">Kierowcy</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-llgray">Zespoły</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-llgray">Ranking</a>
-          </li> -->
           <li v-for="item in element.children">
             <NuxtLink
               :to="item.cpath"
