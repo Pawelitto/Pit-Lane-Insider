@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    newsApiUrl: import.meta.env.NEWS_API_URL,
+    newsApiKey: import.meta.env.NEWS_API_KEY,
+  },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image-edge'],
   css: ['@/assets/css/main.scss'],
   app: {

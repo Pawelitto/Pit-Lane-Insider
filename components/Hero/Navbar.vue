@@ -1,5 +1,11 @@
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite";
+
+onMounted(() => {
+  initFlowbite();
+});
 
 const { x, y } = useWindowScroll();
 
@@ -36,7 +42,7 @@ const navbarElements = [
 ];
 </script>
 <template>
-  <nav :class="y > 50 ? 'sticky-nav' : 'nav'" class="navbarbackhero">
+  <nav :class="y > 50 ? 'sticky-nav' : 'nav'" class="navbarbackhero z-50">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
@@ -78,13 +84,16 @@ const navbarElements = [
         id="navbar-dropdown"
       >
         <ul
-          class="text-xl flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent tracking-widest"
+          class="text-xl flex flex-col font-medium p-4 md:p-0 mt-4 content-center items-center border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent tracking-widest"
         >
           <NavElement
             v-for="element in navbarElements"
             :key="element.name"
             :element="element"
           />
+          <li>
+            <HeroCartIcon />
+          </li>
         </ul>
       </div>
     </div>

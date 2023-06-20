@@ -1,1 +1,4 @@
-<template></template>
+<script setup></script>
+<template>
+  <StoreCategoryPreviews />
+</template>

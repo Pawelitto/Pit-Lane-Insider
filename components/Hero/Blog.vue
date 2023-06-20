@@ -30,7 +30,7 @@ import lewisH from "../../assets/img/blog_lewis.png";
     </div>
     <div class="w-full text-center">
       <button class="dvis m-5 hover:text-red-700 hover:font-medium">
-        CZYTAJ CAŁOŚĆ
+        <NuxtLink to="/news">CZYTAJ CAŁOŚĆ</NuxtLink>
       </button>
     </div>
   </div>

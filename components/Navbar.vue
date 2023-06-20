@@ -1,5 +1,11 @@
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite";
+
+onMounted(() => {
+  initFlowbite();
+});
 
 const { x, y } = useWindowScroll();
 
