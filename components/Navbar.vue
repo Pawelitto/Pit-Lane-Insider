@@ -42,7 +42,7 @@ const navbarElements = [
 ];
 </script>
 <template>
-  <nav :class="y > 50 ? 'sticky-nav' : 'nav'" class="navbarback">
+  <nav :class="y > 50 ? 'sticky-nav' : 'nav'" class="navbarback bg-gray-100">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
@@ -99,7 +99,7 @@ const navbarElements = [
 <style scoped>
 .navbarback {
   width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(180deg, #000000 6.25%, rgba(0, 0, 0, 0) 100%);
 }
 </style>

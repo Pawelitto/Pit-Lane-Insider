@@ -1,7 +1,5 @@
 <script setup>
 import { Icon } from "@iconify/vue";
-// import cartIcon from "@iconify/icons-fa-solid/shopping-cart";
-// import cartIconFilled from "@iconify/icons-fa-solid/shopping-cart-filled";
 
 const hover = ref(true);
 </script>
@@ -16,12 +14,10 @@ const hover = ref(true);
         hover ? 'ph:shopping-cart-simple-bold' : 'ph:shopping-cart-simple-fill'
       "
       width="28"
-      color="#000"
+      class="text-black md:text-white"
     />
-    <!-- <Icon icon="" width="28" color="#fff" /> -->
-    <!-- <icon-base class="icon" :icon="hover ? cartIconFilled : cartIcon" /> -->
 
-    <div class="text-black sm:text-white absolute pos">5</div>
+    <div class="text-black md:text-white absolute pos">5</div>
   </div>
 </template>
 <style scoped>
