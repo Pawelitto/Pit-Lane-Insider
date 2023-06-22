@@ -91,6 +91,9 @@ const navbarElements = [
             :key="element.name"
             :element="element"
           />
+          <li>
+            <HeroCartIcon />
+          </li>
         </ul>
       </div>
     </div>

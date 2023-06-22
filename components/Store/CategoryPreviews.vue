@@ -43,5 +43,6 @@ const categories = [
         </div>
       </div>
     </div>
+    <hr class="w-48 h-1 mx-auto border-0 rounded bg-gray-700" />
   </div>
 </template>

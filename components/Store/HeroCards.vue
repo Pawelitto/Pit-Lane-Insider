@@ -1,9 +1,14 @@
+<script setup>
+import { Icon } from "@iconify/vue";
+const { data: products, pending, refresh, erro } = useFetch("/api/products");
+</script>
 <template>
-  <section class="py-12 text-gray-700 sm:py-16 lg:py-20">
+  <section class="bg-gray-100 py-12 text-gray-700 sm:py-16 lg:py-20">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-md text-center">
         <h2 class="font-serif text-2xl font-bold sm:text-3xl">
-          Produkty na czasie {ikonka ognia}
+          Produkty na czasie
+          <!-- <Icon icon="mdi:fire" width="28" /> -->
         </h2>
       </div>
 
@@ -19,11 +24,3 @@
     </div>
   </section>
 </template>
-<script setup>
-const {
-  data: products,
-  pending,
-  refresh,
-  erro,
-} = await useFetch("/api/products");
-</script>

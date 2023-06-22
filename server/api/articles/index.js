@@ -9,5 +9,5 @@ export default defineEventHandler(async (event) => {
             page: 1,
         },
     })
-    return articles;
+    return articles.articles;
 });
