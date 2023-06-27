@@ -92,7 +92,9 @@ const navbarElements = [
             :element="element"
           />
           <li>
-            <HeroCartIcon />
+            <NuxtLink to="/sklep/koszyk">
+              <HeroCartIcon />
+            </NuxtLink>
           </li>
         </ul>
       </div>

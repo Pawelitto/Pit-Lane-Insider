@@ -84,7 +84,7 @@ const navbarElements = [
         id="navbar-dropdown"
       >
         <ul
-          class="text-xl flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent tracking-widest"
+          class="text-xl flex flex-col font-medium p-4 md:p-0 mt-4 content-center items-center border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent tracking-widest"
         >
           <NavElement
             v-for="element in navbarElements"
@@ -92,7 +92,9 @@ const navbarElements = [
             :element="element"
           />
           <li>
-            <HeroCartIcon />
+            <NuxtLink to="/sklep/koszyk">
+              <HeroCartIcon />
+            </NuxtLink>
           </li>
         </ul>
       </div>

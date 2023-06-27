@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
         params: {
             apiKey: useRuntimeConfig().newsApiKey,
             country: 'us',
-            pageSize: 6,
+            pageSize: 8,
             page: 1,
         },
     })

@@ -11,10 +11,10 @@ const props = defineProps({ product: Object });
         :src="product.image"
         :alt="product.title"
       />
-      <span
+      <!-- <span
         class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white"
         >39% OFF</span
-      >
+      > -->
     </a>
     <div class="mt-4 px-5 pb-5">
       <a href="#">

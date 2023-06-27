@@ -1,0 +1,5 @@
+1. Strona koszyka
+2. Działający store
+3. Funkcjonalność koszyka
+4. Strona podkategorii w sklepie
+6. Ciemny motyw - FINAL BOSS
