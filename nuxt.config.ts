@@ -20,6 +20,11 @@ export default defineNuxtConfig({
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js',
         },
+        {
+          src: '/vendor/preline/dist/preline.js',
+          body: true,
+          defer: true
+        },
       ],
       link: [
         {

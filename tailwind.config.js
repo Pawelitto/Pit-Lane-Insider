@@ -9,6 +9,8 @@ module.exports = {
     'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}',
     'node_modules/flowbite/**/*.{js,jsx,ts,tsx}',
     './node_modules/flowbite.{js,ts}',
+    'node_modules/preline/dist/*.js',
+    './node_modules/flowbite/**/*.{js,ts}',
   ],
   theme: {
     extend: {
@@ -31,5 +33,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'),  require('preline/plugin'),],
 };

@@ -1,6 +1,11 @@
 <script setup>
 import { Icon } from "@iconify/vue";
-const { data: products, pending, refresh, erro } = useFetch("/api/products");
+const {
+  data: products,
+  pending,
+  refresh,
+  erro,
+} = useFetch("/api/products?limit=4");
 </script>
 <template>
   <section class="bg-gray-100 py-12 text-gray-700 sm:py-16 lg:py-20">

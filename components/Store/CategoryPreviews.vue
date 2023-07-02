@@ -6,14 +6,14 @@ const categories = [
     imageSrc:
       "https://itk-assets.nyc3.cdn.digitaloceanspaces.com/2021/04/Screen-Shot-2021-04-26-at-3.27.29-PM.jpg",
     imageAlt: "Technologia",
-    href: "#",
+    href: "/sklep/kategorie/electronics",
   },
   {
     name: "Moda w Twoim stylu",
     description: "Wyraź swoją indywidualność",
     imageSrc: "https://data.whicdn.com/images/348531482/original.jpg",
     imageAlt: "Ubrania.",
-    href: "#",
+    href: "/sklep/kategorie/women's clothing",
   },
   {
     name: "Biżuteria",
@@ -21,7 +21,7 @@ const categories = [
     imageSrc:
       "https://i.etsystatic.com/34904176/r/il/5dd195/3791840565/il_570xN.3791840565_hyzr.jpg",
     imageAlt: "Biżuteria.",
-    href: "#",
+    href: "/sklep/kategorie/jewelery",
   },
 ];
 </script>
